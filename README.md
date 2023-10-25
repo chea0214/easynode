@@ -2,7 +2,7 @@
 
 > 一个简易的个人Linux服务器管理面板(基于Node.js).
 
-> 前端仓库地址：https://github.com/chaos-zhu/easynode_web
+> 前端仓库地址：https://github.com/chea0214/easynode_web
 
 <!-- - [EasyNode](#easynode) -->
   - [功能简介](#功能简介)
@@ -44,13 +44,13 @@
 
 - 依赖Node.js环境
 
-- 占用端口：8082(http端口)、22022(客户端端口)
+- 占用端口：8080(http端口)、22022(客户端端口)
 
 - 建议使用**境外服务器**(最好延迟低)安装服务端，客户端信息监控与webssh功能都将以`该服务器作为跳板机`
 
 #### Docker镜像
 
-> 注意：网速统计功能可能受限，docker网络将使用host模式(与宿主机共享端口，占用: 8082、22022)
+> 注意：网速统计功能可能受限，docker网络将使用host模式(与宿主机共享端口，占用: 8080、22022)
 
 - 如果你是第一次运行，先创建一个volume用于保存数据
 ```shell
@@ -66,7 +66,7 @@ docker run -d --net=host --name=easynode-server -v easynode-server:/easynode-ser
 docker rm -f easynode-server && docker volume remove easynode-server
 ```
 
-访问：http://yourip:8082
+访问：http://yourip:8080
 
 #### 一键脚本
 
@@ -79,10 +79,10 @@ docker rm -f easynode-server && docker volume remove easynode-server
 - 运行环境：[Node.js](https://nodejs.org/en/download/) **v14+**
 
 ```shell
-wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chaos-zhu/easynode/v1.2/easynode-server-install.sh | bash
+wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chea0214/easynode/v1.2/easynode-server-install.sh | bash
 ```
 
-访问：http://yourip:8082
+访问：http://yourip:8080
 
 - 查看日志：`pm2 log easynode-server`
 - 启动服务：`pm2 start easynode-server`
@@ -93,10 +93,10 @@ wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubuserconte
 
 1. 安装Node.js
 2. 安装pm2、安装yarn
-3. 拉取代码：git clone https://github.com/chaos-zhu/easynode.git
+3. 拉取代码：git clone https://github.com/chea0214/easynode.git
 4. 安装依赖：yarn
 5. 启动服务：pm2 start server/app/main.js --name easynode-server
-6. 访问：http://yourip:8082
+6. 访问：http://yourip:8080
 
 - 默认登录密码：admin(首次部署完成后请及时修改).
 
@@ -109,19 +109,19 @@ wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubuserconte
 #### X86架构
 
 ```shell
-wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chaos-zhu/easynode/v1.2/easynode-client-install-x86.sh | bash
+wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chea0214/easynode/v1.2/easynode-client-install-x86.sh | bash
 ```
 
 #### ARM架构
 
 ```shell
-wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chaos-zhu/easynode/v1.1/easynode-client-install-arm.sh | bash
+wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chea0214/easynode/v1.2/easynode-client-install-arm.sh | bash
 ```
 
 > 卸载
 
 ```shell
-wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chaos-zhu/easynode/v1.2/easynode-client-uninstall.sh | bash
+wget -qO- --no-check-certificate https://ghproxy.com/https://raw.githubusercontent.com/chea0214/easynode/v1.2/easynode-client-uninstall.sh | bash
 ```
 
 > 查看客户端状态：`systemctl status easynode-client`
