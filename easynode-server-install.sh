@@ -26,7 +26,7 @@ echo "已安装"
 
 echo "***********************开始下载EasyNode***********************"
 
-DOWNLOAD_FILE_URL="https://ghproxy.com/https://github.com/chaos-zhu/easynode/releases/download/v1.2.1/easynode-server.zip"
+DOWNLOAD_FILE_URL="https://ghproxy.com/https://github.com/chea0214/easynode/releases/download/v1.2/easynode-server.zip"
 SERVER_NAME=easynode-server
 SERVER_ZIP=easynode-server.zip
 FILE_PATH=/root
