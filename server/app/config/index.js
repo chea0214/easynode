@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = {
-  httpPort: 8082,
+  httpPort: 8080,
   clientPort: 22022, // 勿更改
   uploadDir: path.join(process.cwd(),'app/static/upload'),
   staticDir: path.join(process.cwd(),'app/static'),
